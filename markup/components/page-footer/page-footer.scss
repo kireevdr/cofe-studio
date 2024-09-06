@@ -1,0 +1,302 @@
+.page__footer {
+}
+.page-footer__footer {
+}
+.page-footer__footer-top {
+    background-color: #0B1547;
+}
+.page-footer__footer-top-flex {
+    @include media-breakpoint-down(md) {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding-bottom: 56px;
+    padding-top: 56px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 32px;
+}
+.page-footer__top-flex-left {
+    display: flex;
+    flex-direction: column;
+    color: #FEFEFE;
+    gap: 8px;
+    flex-grow: 5;
+    flex-basis: 0;
+    margin-bottom: 20px;
+}
+.page-footer__left-top {
+    font-family: "Montserrat", sans-serif;
+    font-size: 32px;
+    font-weight: 200;
+    color: #FEFEFE;
+}
+.page-footer__left-bottom {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #FEFEFE;
+}
+.page-footer__top-flex-right {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 6;
+    flex-basis: 0;
+}
+.page-footer__right-top-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+.page-footer__top-flex-input {
+    @include media-breakpoint-down(md) {
+        padding: 16px 20px;
+    }
+    @include media-breakpoint-down(xs) {
+        font-size: 10px;
+    }
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #A9A9A9;
+    background-color: #FEFEFE;
+    flex-grow: 1;
+    padding: 12px 20px;
+}
+.page-footer__follow {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+    background-color: rgba(244, 244, 244, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+}
+.bottom-menu-link {
+}
+.page-footer__right-bottom-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: start;
+}
+.page-footer__galka {
+    width: 20px;
+    margin-top: 1px;
+}
+.page-footer__approv {
+    color: #FEFEFE;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+.page-footer__confidence {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+.bottom-menu-link {
+}
+.page-footer__bottom-row {
+    justify-content: space-between;
+}
+.page-footer__bottom-col {
+}
+.page-footer__bottom-flex {
+    @include media-breakpoint-down(md) {
+        align-items: center;
+    }
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.page-footer__header {
+    @include media-breakpoint-down(md) {
+        font-size: 30px;
+    }
+    color: #312F3B;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.page-footer__item {
+    @include media-breakpoint-down(md) {
+        font-size: 21px;
+    }
+    color: #7B809A;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+.page-footer__beauty-flex {
+}
+.page-footer__house-flex {
+}
+.page-footer__sets-flex {
+}
+.page-footer__company-flex {
+}
+.page-footer__buttom-hr {
+    background-color: #ADACB1;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.page-footer__icons-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.page-footer__icons {
+}
+.page-footer__icons-flex {
+    @include media-breakpoint-down(xs) {
+        gap:12px;
+    }
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.page-footer__icon-flex {
+    display: flex;
+    flex-direction: row;
+}
+.page-footer__circle-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #AA767C;
+    border-radius: 16px;
+    position: relative;
+}
+.page-footer__youtube-icon {
+    position: absolute;
+    transform: translateX(37%) translateY(33%);
+}
+.icon__metka-circle {
+}
+.page-footer__vk-icon {
+    position:absolute;
+    transform: translateX(37%) translateY(33%);
+}
+.page-footer__cube-icon {
+    position:absolute;
+    transform: translateX(49%) translateY(36%);
+}
+.page-footer__telegram-icon {
+    position:absolute;
+    transform: translateX(42%) translateY(44%);
+}
+.page-footer__skype-icon {
+    position:absolute;
+    transform: translateX(41%) translateY(34%);
+}
+.page-footer__wapp-icon {
+    position:absolute;
+    transform: translateX(40%) translateY(30%);
+}
+.page-footer__oneclass-icon {
+    position:absolute;
+    transform: translateX(83%) translateY(30%);
+}
+.page-footer__email {
+}
+.page-footer__bottom-menu-link {
+    color: #21211F;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.page-footer__email {
+    color: #21211F;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.page-footer__phone {
+    color: #21211F;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.bottom-menu-link {
+}
+.page-footer__callus {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+.page-footer__call-icon {
+}
+.page-footer__call-text {
+    color: #0B1547;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+.page-footer__footer-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+.page-footer__frow-left {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.page-footer__carts-flex {
+}
+.page-footer__mir {
+}
+.page-footer__maestro {
+}
+.page-footer__mastercard {
+}
+.page-footer__visa {
+}
+.page-footer__frow-right {
+    @include media-breakpoint-down(md) {
+        justify-content: left;
+    }
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-grow: 1;
+    justify-content: right;
+    flex-wrap: wrap;
+}
+.page-footer__confidence-flex {
+}
+.page-footer__conf {
+    color: #AA767C;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+.conf-link {
+}
+.page-footer__conf {
+}
+.conf-link {
+}
+
+
+
+
+

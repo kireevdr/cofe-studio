@@ -1,0 +1,19 @@
+.b-intro-simple {
+    padding: rem(59) 0 rem(52);
+    position: relative;
+    z-index: 25;
+    @include cover;
+    min-height: 364px;
+}
+@include media-breakpoint-down(lg) {
+    .b-intro-simple {
+        min-height: 300px;
+    }
+}
+@include media-breakpoint-down(sm) {
+    .b-intro-simple__nav {
+        margin-bottom: g(10);
+    }
+}
+
+

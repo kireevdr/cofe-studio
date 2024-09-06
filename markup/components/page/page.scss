@@ -1,0 +1,256 @@
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    &.backstop {
+        #__bs_notify__ {
+            display: none !important;
+        }
+    }
+}
+
+.page__b-main {
+    //margin-bottom: g(11);
+}
+.page__b-mortgage-calcul {
+    margin-top: g(6);
+}
+.page__wrapper {
+    flex-grow: 1;
+    position: relative;
+    //box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
+}
+.page__b-choice-apart_bg {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background: url('../img/general/detail-bg.png');
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+}
+.page__wrapper_realt-bg {
+    position: relative;
+
+    &:before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        top: 17%;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background: url('../img/general/detail-bg.png');
+        background-position: bottom right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+.page__content {
+    padding: rem(50) 0;
+}
+
+.page__gray {
+    background: #F7F7F7;
+}
+
+.page__wrapper {
+    flex-grow: 1;
+}
+
+
+.page__header {
+    position: relative;
+    z-index: 50;
+}
+
+
+.page__wrapper_bg {
+    position: relative;
+
+    &:before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        top: 17%;
+        left: 0;
+        right: 0;
+        height: 100vh;
+        background: url('../img/general/detail-bg.png');
+        background-position: bottom right;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
+
+.page__b-video-section,
+.page__b-quarter-about {
+    margin: g(12) 0;
+
+    &_mt0 {
+        margin-top: 0;
+    }
+}
+
+.page__b-add,
+.page__b-registration,
+.page__b-about-apartments,
+.page__b-photo-slider,
+.page__b-photo-desc,
+.page__b-about,
+.page__b-purchase,
+.page__b-benefit,
+.page__b-dev-video,
+.page__b-news-inner,
+.page__b-mort-photo,
+.page__b-building,
+.page__b-photo-about,
+.page__b-news,
+.page__b-mort-advantages,
+.page__b-instal-advantages,
+.page__b-excursions,
+.page__b-build-video,
+.page__b-repairs-slider,
+.page__b-realt-advant,
+.page__b-realt-form,
+.page__b-realt-doc,
+.page__b-realt-apart,
+.page__b-apartments-inner,
+.page__b-building-inner,
+.page__b-option-section,
+.page__b-small-text,
+.page__b-3d-tour,
+.page__b-mort-cards,
+.page__b-banners,
+.page__b-photo-desc-about,
+{
+    margin: g(12) 0;
+}
+
+.page__b-about-img,
+.page__b-video-img
+{
+    margin: 0;
+}
+
+.page__b-add1
+{
+    padding: g(12) 0;
+}
+.page__b-distance {
+    margin-top: g(12);
+}
+.page__b-disc {
+    margin-bottom: g(12);
+}
+@media print {
+    .b-options-apart__more {
+        display: none;
+    }
+    .b-options-apart__link-content {
+        display: none;
+    }
+    .page-header {
+        display: none;
+    }
+    .page-footer {
+        display: none;
+    }
+    .b-intro-simple {
+        display: none;
+    }
+    .b-options-apart__row {
+        display: block;
+        text-align: left;
+        font-size: 0;
+        &>* {
+            font-size: 16px;
+        }
+
+    }
+    .b-options-apart__col{
+        display: inline-block;
+        page-break-inside: avoid;
+        //page-break-after: always;
+        //width: 100% !important;
+        //max-width: none !important;
+
+        margin-bottom: 0;
+        &:nth-child(4n) {
+            &:after {
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0;
+                bottom: 0;
+                left: -100vw;
+                right: -100vw;
+                page-break-inside: avoid;
+
+            }
+        }
+
+
+    }
+    .page__print-break {
+        //display: block;
+        //page-break-after: always;
+    }
+    .b-buy__type {
+        padding: 0;
+        //display: none;
+    }
+    .b-options-apart__social {
+        display: none;
+    }
+    .b-buy__rooms-fav {
+        display: none;
+    }
+    .b-buy__btn {
+        display: none;
+    }
+    .col-6  {
+        max-width: 25%;
+    }
+    .col-lg-6  {
+        max-width: 25%;
+    }
+    .col-md-6  {
+        max-width: 25%;
+    }
+    .container {
+        max-width: 100%;
+    }
+    .b-options-apart__logo {
+        display: block;
+    }
+}
+.js-print {
+    @include media-breakpoint-down(md) {
+        display: none !important;
+    }
+}
+.page__b-option-section_nonres {
+    margin-bottom: 0;
+}
+
+.page__footer {
+    margin-top: 60px;
+    @include media-breakpoint-down(sm) {
+        margin-top: 45px;
+    }
+}

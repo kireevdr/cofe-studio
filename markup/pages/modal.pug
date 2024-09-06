@@ -1,0 +1,51 @@
+//-Modal
+extends ../layouts/default.pug
+
+include ../components/b-senks/b-senks
+
+include ../components/page-header/page-header
+include ../components/user-content/user-content
+
+include ../components/b-modal/b-modal
+block vars
+    - var title = 'Modal'
+
+
+block content
+    .page__wrapper
+        .page__page-header
+            +page-header
+        .container.user-content
+            p(style='padding-top: 30px')
+                a(href='#callme', data-toggle='modal')
+                    | Форма
+
+            p.
+                Вывод окна спасибо:<br>    window.drowRes('Спасибо', 'Мы свяжемся с вами в ближайшее время', $('.b-modal form'))
+
+            //p
+            //    a(href='#video', data-toggle='modal')
+            //        | Видео
+            //
+            //
+            //p
+            //    a(href='#text', data-toggle='modal')
+            //        | Текст
+
+        // Форма
+        #callme.modal.fade(tabindex='-1', role='dialog', aria-hidden='true')
+            .modal-dialog.modal-sm(role='document')
+                .modal-content.modal-content_beige
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        !=  pugHelpers.Icon.call(locals, {iconName: 'close'})
+
+                    +b-modal
+
+
+
+
+
+    //script.
+    //    window.onload = function() {
+    //        $("[href='#cart']").trigger('click')
+    //    }

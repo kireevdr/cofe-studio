@@ -1,0 +1,22 @@
+mixin b-modal(data)
+    +b.b-modal
+        +e.container
+            +e.form
+                form
+                    +e.content
+                        +e.title Заказать звонок
+                        +e.input
+                            +e.LABEL.label Ваше имя
+                                +e.INPUT.form-control(type="text")
+                        +e.input
+                            +e.LABEL.label Ваш телефон
+                                +e.INPUT.form-control(type="tel" required)
+                        +e.input
+                        +e.call
+                            +e.BUTTON.btn(type='submit') Заказать
+                            +e.btn-text
+                                p Или позвоните нам!
+                                +e.A.tel(href='tel:+7 3452 28 83 14') +7 (3452) 28 83 14
+
+
+

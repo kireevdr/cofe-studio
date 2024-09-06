@@ -1,0 +1,11 @@
+mixin b-404(data)
+    +b.b-404(style='background-image: url(%=static=%img/content/cat.jpg)')
+        .container
+            .row
+                .col-md-7
+                    +e.title :(
+                    +e.text Страница не найдена
+                    +e.help Возможно, она была удалена, либо адрес страницы содержит опечатки.
+                    +e.btns
+                        +e.A.btn(href='/') На главную
+

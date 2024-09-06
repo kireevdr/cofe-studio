@@ -1,0 +1,102 @@
+mixin b-basic(data)
+    +b.b-basic
+        .container
+            +e.top-menu.row
+                +e.top.col-md-12
+                    +e.top-flex
+                        +e.A.basic-menu-link(href='/')
+                            +e.white-house
+                                !=  pugHelpers.Icon.call(locals, {iconName: 'house-white'})
+                        +e.HR.dash
+                        +e.A.category.basic-menu-link(href='/') Категория
+                        +e.HR.dash
+                        +e.A.health.basic-menu-link(href='/') Здоровье
+                        +e.HR.dash-blue
+                        +e.A.firma.basic-menu-link(href='/') Dermаlogiсa PreCleanse -
+                        +e.product.basic-menu-link(href='/') гидрофильное очищающее масло 150мл
+            +e.hproduct-flex
+                +e.A.arrow.basic-menu-link(href='/')
+                    +e.arrow-white
+                        img(src='__static__img/general/arrow-white.svg')
+                    +e.arrow-text Назад
+                +e.product-firma Dermаlogiсa PreCleanse - гидрофильное очищающее масло 150мл
+            +e.middle-menu
+                +e.middle-col
+                    +e.carusel-flex
+                        +e.vertical-flex
+                            .swiper-container.gallery-thumbs
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        img(src='__static__img/general/pic.png' alt="...")
+                                    .swiper-slide
+                                        img(src='__static__img/general/pic.png' alt="...")
+                                    .swiper-slide
+                                        img(src='__static__img/general/pic.png' alt="...")
+                                    .swiper-slide
+                                        img(src='__static__img/general/pic.png' alt="...")
+                        +e.slider.swiper-container.gallery-top
+                            .swiper-wrapper
+                                .swiper-slide
+                                    img(src='__static__img/general/pic.png' alt="...")
+
+                                .swiper-slide
+                                    img(src='__static__img/general/pic.png' alt="...")
+                                .swiper-slide
+                                    img(src='__static__img/general/pic.png' alt="...")
+                                .swiper-slide
+                                    img(src='__static__img/general/pic.png' alt="...")
+                                .swiper-slide
+                                    img(src='__static__img/general/pic.png' alt="...")
+                            .swiper-button-next.swiper-button-black
+                            .swiper-button-prev.swiper-button-black
+                +e.middle-flex
+                    +e.middle-flex-right
+                        +e.flex-r
+                            +e.flex-r-1
+                                +e.A.numbers.about-link(href='/') 2 +1
+                                +e.A.actions.about-link(href='/') Товар недели
+                            +e.A.stars-flex.about-link(href='/')
+                                img.star(src='__static__img/general/Star-gold.svg')
+                                img.star(src='__static__img/general/Star-gold.svg')
+                                img.star(src='__static__img/general/Star-gold.svg')
+                                img.star(src='__static__img/general/Star-gold.svg')
+                                img.star(src='__static__img/general/Star-grey.svg')
+                                +e.reviews 345 отзывов
+                            +e.A.share.about-link(href='/')
+                                !=  pugHelpers.Icon.call(locals, {iconName: 'share'})
+                        +e.article Код товара: 12332211231ААВ
+                    +e.info-flex
+                        +e.header-about Описание
+                        +e.about Мощный коктейль из 12 аминокислот (лейцин, аргинин, аспарагиновая кислота, глицин, аланин, серин, валин, пролин, треонин, изолейцин, гистидин, фенилаланин) повышает эластичность, обеспечивает увлажняющий эффект, наполняет клетки кожи энергией.
+                        +e.A.about-link(href='/') К описанию
+                        +e.price-flex
+                            +e.price-sale 12 600 &#x20bd
+                            +e.price 14 000 &#x20bd
+                        +e.previously Предварительная цена доступна после авторизации
+                    +e.HR.previously-hr
+                    +e.info-flex
+                        +e.favorites-flex
+                            +e.A.favorites-f.about-link(href='/')
+                                +e.fav-text Добавить в избранное
+                                +e.fav-icon
+                                    !=  pugHelpers.Icon.call(locals, {iconName: 'heart-white'})
+                            +e.A.put.about-link(href='/') Добавить в корзину
+            +e.description-flex
+                ul#pills-tab.b-basic__des-flex.nav.nav-pills.mb-4(role="tablist")
+                    li.nav-item
+                        a#pills-home-tab.b-basic__description.nav-link.active(data-toggle="pill", href="#pills-home", role="tab", aria-controls="pills-home", aria-selected="true") Описание
+                    li.nav-item
+                        a#pills-profile-tab.b-basic__content.nav-link(data-toggle="pill", href="#pills-profile", role="tab", aria-controls="pills-profile", aria-selected="false") Состав
+                    li.nav-item
+                        a#pills-contact-tab.b-basic__method.nav-link(data-toggle="pill", href="#pills-contact", role="tab", aria-controls="pills-contact", aria-selected="false") Способ применения
+                    li.nav-item
+                        a#pills-questions-tab.b-basic__questions.nav-link(data-toggle="pill", href="#pills-questions", role="tab", aria-controls="pills-questions", aria-selected="false") Вопросы и ответы
+                +e.P.description-header Описание
+                #pills-tabContent.tab-content.b-basic__description-text
+                    #pills-home.tab-pane.fade.show.active(role="tabpanel", aria-labelledby="pills-home-tab") Лёгкое масло из комбинации масел Оливы, орехов Кукуйи и Абрикоса удаляет с поверхности кожи жирорастворимые загрязнения и средства макияжа. Это первый этап Двойного очищения Dermalogica. Precleanse полностью растворяет себум, солнцезащитные фильтры, водостойкую косметику, загрязнения из окружающей среды, которые скапливаются на поверхности кожи, и позволяет назначенному Вам очистителю для второго этапа очищения более тщательно воздействовать на кожу и получить результаты профессионального очищения. Профессиональный и розничный продукт.<br> <br> Производитель соблюдает нормы и стандарты законодательства стран ЕС по защите окружающей среды, поэтому ламинат производится исключительно из натуральной древесины, которая поставляется из специально отведенных к вырубке участков. Таким образом, экоприверженность и соответствие европейским требованиям безопасности в эксплуатации подтверждены определенными сертификатами.
+
+                    #pills-profile.tab-pane.fade(role="tabpanel", aria-labelledby="pills-profile-tab") Лёгкое масло из комбинации масел Оливы, орехов Кукуйи и Абрикоса удаляет с поверхности кожи жирорастворимые загрязнения и средства макияжа. Это первый этап Двойного очищения Dermalogica. Precleanse полностью растворяет себум, солнцезащитные фильтры, водостойкую косметику, загрязнения из окружающей среды, которые скапливаются на поверхности кожи, и позволяет назначенному Вам очистителю для второго этапа очищения более тщательно воздействовать на кожу и получить результаты профессионального очищения. Профессиональный и розничный продукт.<br> <br> Производитель соблюдает нормы и стандарты законодательства стран ЕС по защите окружающей среды, поэтому ламинат производится исключительно из натуральной древесины, которая поставляется из специально отведенных к вырубке участков. Таким образом, экоприверженность и соответствие европейским требованиям безопасности в эксплуатации подтверждены определенными сертификатами.
+
+                    #pills-contact.tab-pane.fade(role="tabpanel", aria-labelledby="pills-contact-tab") Лёгкое масло из комбинации масел Оливы, орехов Кукуйи и Абрикоса удаляет с поверхности кожи жирорастворимые загрязнения и средства макияжа. Это первый этап Двойного очищения Dermalogica. Precleanse полностью растворяет себум, солнцезащитные фильтры, водостойкую косметику, загрязнения из окружающей среды, которые скапливаются на поверхности кожи, и позволяет назначенному Вам очистителю для второго этапа очищения более тщательно воздействовать на кожу и получить результаты профессионального очищения. Профессиональный и розничный продукт.<br> <br> Производитель соблюдает нормы и стандарты законодательства стран ЕС по защите окружающей среды, поэтому ламинат производится исключительно из натуральной древесины, которая поставляется из специально отведенных к вырубке участков. Таким образом, экоприверженность и соответствие европейским требованиям безопасности в эксплуатации подтверждены определенными сертификатами.
+
+                    #pills-questions.tab-pane.fade(role="tabpanel", aria-labelledby="pills-questions-tab") Лёгкое масло из комбинации масел Оливы, орехов Кукуйи и Абрикоса удаляет с поверхности кожи жирорастворимые загрязнения и средства макияжа. Это первый этап Двойного очищения Dermalogica. Precleanse полностью растворяет себум, солнцезащитные фильтры, водостойкую косметику, загрязнения из окружающей среды, которые скапливаются на поверхности кожи, и позволяет назначенному Вам очистителю для второго этапа очищения более тщательно воздействовать на кожу и получить результаты профессионального очищения. Профессиональный и розничный продукт.<br> <br> Производитель соблюдает нормы и стандарты законодательства стран ЕС по защите окружающей среды, поэтому ламинат производится исключительно из натуральной древесины, которая поставляется из специально отведенных к вырубке участков. Таким образом, экоприверженность и соответствие европейским требованиям безопасности в эксплуатации подтверждены определенными сертификатами.

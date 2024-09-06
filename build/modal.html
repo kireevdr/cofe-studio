@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ru">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Modal</title>
+      <meta content="" name="description">
+      <meta content="" name="keywords">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta content="telephone=no" name="format-detection">
+      <meta name="HandheldFriendly" content="true">
+      <!--link(href='https://fonts.googleapis.com/css?family=Cormorant:300,400,500,600|Noto+Sans:400,400i,700&display=swap&subset=cyrillic', rel='stylesheet')-->
+      <link href="static/css/main.css?1" rel="stylesheet">
+      <link rel="shortcut icon" href="fav.svg" type="image/svg">
+      <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
+  </head>
+  <body class="page">
+    <div class="page__wrapper">
+      <div class="page__page-header">
+              <div class="page-header">
+                        <div class="page-header__top">
+                          <div class="container">
+                                    <div class="page-header__top-flex">
+                                              <div class="page-header__flex-top">
+                                                        <div class="page-header__flex-start"><a class="page-header__page-header__top-menu-link" href="/"><span class="page-header__link"><span class="page-header__start-circle">
+            <svg class="icon__metka-circle" width="12px" height="16px">
+                <use xlink:href="svg-symbols.svg#metka-circle"></use>
+            </svg>
+        </span><span class="page-header__start-point">
+            <svg class="icon__metka-point" width="6px" height="6px">
+                <use xlink:href="svg-symbols.svg#metka-point"></use>
+            </svg>
+        </span></span></a><a class="page-header__place top-menu-link" href="/">Местоположение</a><a class="page-header__support top-menu-link" href="/">Поддержка</a>
+                                                        </div>
+                                                        <div class="page-header__flex-bottom"><a class="page-header__company top-menu-link" href="/">Компаниям</a><a class="page-header__partners top-menu-link" href="/">Партнерам</a>
+                                                        </div>
+                                              </div><a class="page-header__top-img top-menu-link" href="/"><img class="top-menu-link top-menu-logo" src="static/img/general/logo.svg"/></a>
+                                              <div class="page-header__flex">
+                                                        <div class="page-header__f-start"><a class="page-header__top-menu-link" href="/"><span class="page-header__enter">Вход</span></a><a class="page-header__start-menu-link" href="/"><span class="page-header__arrow">
+            <svg class="icon__arrow-header" width="14px" height="15px">
+                <use xlink:href="svg-symbols.svg#arrow-header"></use>
+            </svg>
+        </span></a>
+                                                        </div>
+                                                        <div class="page-header__f-end"><a class="page-header__top-menu-link" href="/">
+            <svg class="icon__lupa" width="20px" height="21px">
+                <use xlink:href="svg-symbols.svg#lupa"></use>
+            </svg>
+        </a><a class="page-header__top-menu-link" href="/"><span class="page-header__heart">
+            <svg class="icon__heart-header" width="20px" height="19px">
+                <use xlink:href="svg-symbols.svg#heart-header"></use>
+            </svg>
+        </span></a><a class="page-header__top-menu-link" href="/"><span class="page-header__cart">
+            <svg class="icon__cart-header" width="20px" height="21px">
+                <use xlink:href="svg-symbols.svg#cart-header"></use>
+            </svg>
+        </span></a>
+                                                        </div>
+                                              </div>
+                                    </div><hr class="page-header__hr"/>
+                                    <div class="page-header__header-flex">
+                                              <div class="page-header__catalog"><a class="page-header__blu-link" href="/"><img src="static/img/general/list.svg"/><a class="page-header__bottom-menu-link" href="/">Каталог</a></a>
+                                              </div>
+                                              <div class="page-header__health"><a class="page-header__blu-link" href="/"><img src="static/img/general/bottle.svg"/><a class="page-header__bottom-menu-link" href="/">Здоровье</a></a>
+                                              </div>
+                                              <div class="page-header__beauty"><a class="page-header__blu-link" href="/"><img src="static/img/general/stone.svg"/><a class="page-header__bottom-menu-link" href="/"> Красота</a></a>
+                                              </div>
+                                              <div class="page-header__gigien"><a class="page-header__blu-link" href="/"><img src="static/img/general/shampoo.svg"/><a class="page-header__bottom-menu-link" href="/">Гигиена</a></a>
+                                              </div>
+                                              <div class="page-header__all"><a class="page-header__blu-link" href="/"><img src="static/img/general/house.svg"/><a class="page-header__bottom-menu-link" href="/">Все для дома</a></a>
+                                              </div>
+                                    </div>
+                          </div>
+                        </div>
+              </div>
+      </div>
+      <div class="container user-content">
+        <p style="padding-top: 30px"><a href="#callme" data-toggle="modal">Форма</a></p>
+        <p>
+          Вывод окна спасибо:<br>    window.drowRes('Спасибо', 'Мы свяжемся с вами в ближайшее время', $('.b-modal form'))
+          
+        </p>
+        <!--p-->
+        <!--    a(href='#video', data-toggle='modal')-->
+        <!--        | Видео-->
+        <!---->
+        <!---->
+        <!--p-->
+        <!--    a(href='#text', data-toggle='modal')-->
+        <!--        | Текст-->
+      </div>
+      <!-- Форма-->
+      <div class="modal fade" id="callme" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content modal-content_beige">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <svg class="icon__close" width="12px" height="12px">
+                <use xlink:href="svg-symbols.svg#close"></use>
+            </svg>
+        
+            </button>
+                  <div class="b-modal">
+                            <div class="b-modal__container">
+                                      <div class="b-modal__form">
+                                        <form>
+                                                  <div class="b-modal__content">
+                                                            <div class="b-modal__title">Заказать звонок
+                                                            </div>
+                                                            <div class="b-modal__input">
+                                                                      <label class="b-modal__label">Ваше имя<input class="b-modal__form-control" type="text"/>
+                                                                      </label>
+                                                            </div>
+                                                            <div class="b-modal__input">
+                                                                      <label class="b-modal__label">Ваш телефон<input class="b-modal__form-control" type="tel" required="required"/>
+                                                                      </label>
+                                                            </div>
+                                                            <div class="b-modal__input">
+                                                            </div>
+                                                            <div class="b-modal__call">
+                                                                      <button class="b-modal__btn" type="submit">Заказать
+                                                                      </button>
+                                                                      <div class="b-modal__btn-text">
+                                                                        <p>Или позвоните нам!</p><a class="b-modal__tel" href="tel:+7 3452 28 83 14">+7 (3452) 28 83 14</a>
+                                                                      </div>
+                                                            </div>
+                                                  </div>
+                                        </form>
+                                      </div>
+                            </div>
+                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--script.-->
+    <!--    window.onload = function() {-->
+    <!--        $("[href='#cart']").trigger('click')-->
+    <!--    }--><a class="page__up">
+            <svg class="icon__up" width="13px" height="15px">
+                <use xlink:href="svg-symbols.svg#up"></use>
+            </svg>
+        </a>
+    <!--script(src='https://unpkg.com/container-query-polyfill/cqfill.iife.min.js')-->
+    <script src="static/js/vendor.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

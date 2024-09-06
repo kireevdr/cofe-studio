@@ -1,0 +1,202 @@
+// Mixins.
+
+ $baseFontSize : 16;
+@function rem($pixels, $context: $baseFontSize) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+
+    @return $pixels / $context * 1rem;
+}
+@function g($n) {
+    @return var(--g#{$n});
+}
+@mixin min-height-in-vh($n) {
+    min-height: #{$n}vh;
+    min-height: calc(var(--vh, 1vh) * #{$n});
+}
+
+@mixin btn {
+    display: inline-block;
+    line-height: 1;
+    text-align: center;
+    transition: 0.2s background, 0.2s color, 0.2s border;
+    position: relative;
+    cursor: pointer;
+
+    //font-family: $SFProDisplay;
+    color: #383431;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 700;
+
+
+    padding:  g(6) g(10);
+    border: rem(3) solid #C4AB54;
+    background: transparent;
+    border-radius: 3px;
+
+    &:hover {
+        background: #C4AB54;
+        color: #fff;
+    }
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@mixin btn-block {
+    display: block;
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+//@mixin btn-theme-green {
+//    background: #A4BF37;
+//}
+
+@mixin zoom {
+    @include media-breakpoint-up(lg) {
+        $galleryTransition: 0.6s;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(45, 33, 23, 0.3);
+            z-index: 5;
+            opacity: 0;
+            transition: $galleryTransition;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: url(../img/general/zoom.svg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: rem(46) rem(47);
+            z-index: 10;
+            display: none;
+            animation: top 0.6s forwards;
+
+        }
+        &:hover {
+            &:before,
+            &:after {
+                opacity: 1;
+                display: block;
+            }
+        }
+    }
+}
+@mixin link-h {
+    &:hover {
+            filter: brightness(200%);
+    }
+}
+@mixin link-l {
+    &:hover {
+        color: #21211F;
+    }
+}
+@mixin cover {
+    background-size: cover;
+    background-position: center center;
+}
+@mixin modal-title {
+    font-weight: 300;
+    font-size: rem(36);
+    color: #E5E5E5;
+    text-transform: uppercase;
+    margin-bottom: rem(30);
+}
+@mixin list {
+    margin: 0;
+    padding: 0;
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        font-weight: 400;
+        display: inline-flex;
+        width: 100%;
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: rem(22);
+        &:before {
+            content: '';
+            display: inline-block;
+            width: rem(8);
+            height: rem(8);
+            background: #C2A84D;
+            margin-right: rem(13);
+            flex-shrink: 0;
+            position: absolute;
+            top: 0.3em;
+            left: 0;
+        }
+    }
+}
+@mixin testFix() {
+    @media (min-height: 1400px) {
+        min-height: 800px;
+        height: auto;
+    }
+}
+
+@mixin gutter($n) {
+    @if (unitless($n)) {
+        $n: $n * 1px;
+    }
+    margin: 0 #{$n * -1};
+    & > div {
+        padding: 0 #{$n};
+    }
+}
+@mixin text-last-mb-fix() {
+    &>*:last-child {
+        margin-bottom: 0;
+    }
+}
+@mixin gutter-y($n: 30px) {
+    @if (unitless($n)) {
+        $n: $n * 1px;
+    }
+    margin-bottom: #{$n * -1};
+    &>div {
+        margin-bottom: $n;
+    }
+}
+@mixin margin-bottom-not-last($n) {
+    &:not(:last-child) {
+        margin-bottom: $n;
+    }
+}
+@mixin grid-template-columns($n) {
+    display: grid;
+    grid-template-columns: repeat($n, minmax(0, 1fr));
+}
+
+@mixin col-span($n) {
+    grid-column: auto / span $n;
+}
+
+@mixin row-span($n) {
+    grid-row: auto / span $n;
+}

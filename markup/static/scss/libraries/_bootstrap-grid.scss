@@ -1,0 +1,74 @@
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/transitions";
+$enable-grid-classes:                         true;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 700px,
+        lg: 992px,
+        xl: 1310px,
+        xxl: 1610px
+
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+
+$container-max-widths: (
+        sm: 540px,
+        md: 710px,
+        lg: 990px,
+        xl: 1267px,
+        xxl: 1600px
+);
+
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12;
+$grid-gutter-width:           30px;
+
+html {
+    box-sizing: border-box;
+    -ms-overflow-style: scrollbar;
+    }
+
+    *,
+    *::before,
+    *::after {
+    box-sizing: inherit;
+}
+
+
+    //@import "bootstrap/scss/variables";
+
+    @import "bootstrap/scss/mixins/breakpoints";
+    @import "bootstrap/scss/mixins/grid-framework";
+    @import "bootstrap/scss/mixins/grid";
+
+    @import "bootstrap/scss/grid";
+    $modal-sm: 457px;
+
+    $modal-md: 690px;
+    $modal-lg: 993px;
+    @import "bootstrap/scss/modal";
+    //@import "bootstrap/scss/utilities/display";
+    //@import "bootstrap/scss/utilities/flex";
+    //@import "bootstrap/scss/utilities/spacing";

@@ -1,0 +1,63 @@
+mixin page-header(data)
+    -
+        var data = data || {}
+        var modeList = data.modeList || []
+        var mode = ''
+        modeList.map(n => mode += `_${n} `)
+    +b.page-header(class=mode)
+        +e.top
+            .container
+                +e.top-flex
+                    +e.flex-top
+                        +e.flex-start
+                            +e.A.page-header__top-menu-link(href='/')
+                                +e.link
+                                    +e.start-circle
+                                        !=  pugHelpers.Icon.call(locals, {iconName: 'metka-circle'})
+                                    +e.start-point
+                                        !=  pugHelpers.Icon.call(locals, {iconName: 'metka-point'})
+                            +e.A.place.top-menu-link(href='/') Местоположение
+                            +e.A.support.top-menu-link(href='/') Поддержка
+                        +e.flex-bottom
+                            +e.A.company.top-menu-link(href='/') Компаниям
+                            +e.A.partners.top-menu-link(href='/') Партнерам
+                    +e.A.top-img.top-menu-link(href='/')
+                        img(src='__static__img/general/logo.svg').top-menu-link.top-menu-logo
+                    +e.flex
+                        +e.f-start
+                            +e.A.top-menu-link(href='/')
+                                +e.enter Вход
+                            +e.A.start-menu-link(href='/')
+                                +e.arrow
+                                    !=  pugHelpers.Icon.call(locals, {iconName: 'arrow-header'})
+                        +e.f-end
+                            +e.A.top-menu-link(href='/')
+                                !=  pugHelpers.Icon.call(locals, {iconName: 'lupa'})
+                            +e.A.top-menu-link(href='/')
+                                +e.heart
+                                    !=  pugHelpers.Icon.call(locals, {iconName: 'heart-header'})
+                            +e.A.top-menu-link(href='/')
+                                +e.cart
+                                    !=  pugHelpers.Icon.call(locals, {iconName: 'cart-header'})
+                +e.HR.hr
+                +e.header-flex
+                    +e.catalog
+                        +e.A.blu-link(href='/')
+                            img(src='__static__img/general/list.svg')
+                            +e.A.bottom-menu-link(href='/') Каталог
+                    +e.health
+                        +e.A.blu-link(href='/')
+                            img(src='__static__img/general/bottle.svg')
+                            +e.A.bottom-menu-link(href='/') Здоровье
+                    +e.beauty
+                        +e.A.blu-link(href='/')
+                            img(src='__static__img/general/stone.svg')
+                            +e.A.bottom-menu-link(href='/')  Красота
+                    +e.gigien
+                        +e.A.blu-link(href='/')
+                            img(src='__static__img/general/shampoo.svg')
+                            +e.A.bottom-menu-link(href='/') Гигиена
+                    +e.all
+                        +e.A.blu-link(href='/')
+                            img(src='__static__img/general/house.svg')
+                            +e.A.bottom-menu-link(href='/') Все для дома

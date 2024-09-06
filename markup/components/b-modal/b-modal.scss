@@ -1,0 +1,127 @@
+.modal .close {
+    position: absolute;
+    top: rem(18);
+    right: rem(18);
+    background: transparent;
+    fill: #979797;
+    padding: 0;
+    z-index: 15;
+}
+
+.b-modal__form {
+    display: block;
+    background: rgba(255, 255, 255, 0.97);
+    box-sizing: border-box;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    padding: g(10);
+    text-align: center;
+
+    label {
+
+    }
+
+    input {
+
+
+    }
+
+    label {
+
+    }
+
+    .b-checkbox {
+        margin-bottom: g(9);
+        text-align: start;
+
+        label {
+            font-size: 14px;
+            @include media-breakpoint-down(xs) {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.b-modal__form-control {
+    background: #FFFFFF;
+    border: 1px solid #CDCDCD;
+    box-sizing: border-box;
+    border-radius: 13px;
+    padding: 12px 18px 13px;
+    max-height: 41px;
+    margin-top: g(7);
+}
+
+.b-modal__label {
+    color: #2B2B2B;
+    font-weight: normal;
+    font-size: 14px;
+    //font-family: $Lato;
+    display: flex;
+    flex-direction: column;
+}
+
+.b-modal__input {
+    margin-bottom: g(8);
+}
+
+.b-modal__title {
+    color: #1F1F1F;
+    //font-family: $Montserrat;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: start;
+    margin-bottom: g(6);
+    padding-right: 30px;
+}
+
+.b-modal__btn {
+    @include btn;
+    margin-right: rem(38);
+}
+
+.b-modal__btn-text {
+    color: #323232;
+    font-weight: normal;
+    font-size: 15px;
+
+    p {
+        margin-bottom: g(5);
+    }
+}
+
+.b-modal__call {
+    display: flex;
+    align-items: center;
+}
+
+.b-modal__input {
+    //font-family: $Lato;
+    font-weight: normal;
+    font-size: 14px;
+    margin-bottom: g(9);
+    text-align: start;
+    color: #2B2B2B;
+}
+
+.b-modal__content {
+
+}
+
+.b-modal__tel {
+    color: #323232;
+    font-weight: normal;
+    font-size: 15px;
+    @include link-h;
+}
+
+@include media-breakpoint-down(sm) {
+    .b-modal__call {
+        flex-direction: column;
+    }
+    .b-modal__btn {
+        margin-right: 0;
+        margin-bottom: g(8);
+    }
+}

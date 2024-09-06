@@ -1,0 +1,13 @@
+
+mixin b-intro-simple(data)
+    -
+        var data = data || {}
+        var modeList = data.modeList || []
+        var mode = ''
+        modeList.map(n=> mode+= `_${n} `)
+        data.bg = data.bg || '__static__img/general/contacts-bg.jpg'
+
+
+    +b.b-intro-simple(class=mode style=`background-image: url(${data.bg })`)
+        .container
+

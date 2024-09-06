@@ -1,0 +1,20 @@
+//-404
+extends ../layouts/default.pug
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer.pug
+
+
+
+include ../components/b-404/b-404
+block vars
+    - var title = '404'
+
+block content
+    .page__header
+        +page-header
+
+    .page__wrapper
+        +b-404
+    .page__footer
+        +page-footer
+

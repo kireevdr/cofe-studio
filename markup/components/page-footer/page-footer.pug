@@ -1,0 +1,112 @@
+mixin page-footer(data)
+    +b.page-footer
+        +e.footer
+            +e.footer-top
+                .container
+                    +e.footer-top-flex
+                        +e.top-flex-left
+                            +e.left-top Рассылка о здоровье и красоте
+                            +e.left-bottom Подпишись и узнавай о здоровом питании, пользе витаминов и экологии
+                        +e.top-flex-right
+                            +e.right-top-flex
+                                +e.INPUT.top-flex-input( placeholder="Введите адрес электронной почты")
+                                +e.A.follow.footer-link(href='/') Подписаться
+                            +e.right-bottom-flex
+                                +e.INPUT.galka(type='checkbox')
+                                +e.approv Принимаю условия <a href='/' target='_blank' class='page-footer__confidence'>политики конфиденциальности</a> и даю разрешение на обработку персональных данных в соответствии с <a href='/' target='_blank' class='page-footer__confidence'>согласием на обработку персональных данных</a>
+            .container
+                +e.bottom-row.row.justify-content-between
+                    +e.bottom-col.col-lg-2.col-sm-6
+                        +e.bottom-flex
+                            +e.header Здоровье
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                    +e.bottom-col.col-lg-2.col-sm-6
+                        +e.bottom-flex
+                            +e.header Красота
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                    +e.bottom-col.col-lg-2.col-sm-6
+                        +e.bottom-flex
+                            +e.header Дом
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                    +e.bottom-col.col-lg-2.col-sm-6
+                        +e.bottom-flex
+                            +e.header Наборы
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                    +e.bottom-col.col-lg-2.col-sm-6
+                        +e.bottom-flex
+                            +e.header О компании
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                            +e.item Пункт меню
+                +e.HR.buttom-hr
+                +e.icons-row
+                    +e.icons-flex
+                        +e.A.A.icon-flex.menu-link(href='/')
+                            +e.circle-icon
+                            +e.youtube-icon
+                                img(src='__static__img/general/youtube.svg')
+                        +e.A.icon-flex.menu-link(href='/')
+                            +e.circle-icon
+                            +e.vk-icon
+                                img(src='__static__img/general/vk.svg')
+                        +e.A.icon-flex.menu-link(href='/')
+                            +e.circle-icon
+                            +e.cube-icon
+                                img(src='__static__img/general/yandex.svg')
+                        +e.A.icon-flex.menu-link(href='/')
+                            +e.circle-icon
+                            +e.telegram-icon
+                                img(src='__static__img/general/telegram.svg')
+                        +e.A.icon-flex.menu-link(href='/')
+                            +e.circle-icon
+                            +e.skype-icon
+                                img(src='__static__img/general/s.svg')
+                        +e.A.icon-flex.menu-link(href='/')
+                            +e.circle-icon
+                            +e.wapp-icon
+                                img(src='__static__img/general/wa.svg')
+                        +e.A.icon-flex.menu-link(href='/')
+                            +e.circle-icon
+                            +e.oneclass-icon
+                                img(src='__static__img/general/oneclass.svg')
+                    +e.email
+                        +e.A.email.bottom-menu-link(href="mailto:example@mail.com") example@mail.com
+                    +e.phone
+                        +e.A.bottom-menu-link(href='/') 8 800 555 55 22
+                    +e.call
+                        +e.A.callus.menu-link(href='/')
+                            +e.call-icon
+                                img(src='__static__img/general/telega-blue.png')
+                            +e.call-text Написать нам
+                +e.HR.buttom-hr
+                +e.footer-row
+                    +e.frow-left
+                            +e.A.mir.menu-link(href='/')
+                                img(src='__static__img/general/MNP.svg')
+                            +e.A.maestro.menu-link(href='/')
+                                img(src='__static__img/general/Maestro.svg')
+                            +e.A.mastercard.menu-link(href='/')
+                                img(src='__static__img/general/Mastercard.svg')
+                            +e.A.visa.menu-link(href='/')
+                                img(src='__static__img/general/Visa.svg')
+                    +e.frow-right
+                        +e.A.conf.conf-link(href='/') Политика конфиденциальности
+                        +e.A.conf.conf-link(href='/') Сделано в CoffeeStudio

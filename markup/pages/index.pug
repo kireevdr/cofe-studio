@@ -1,0 +1,147 @@
+
+//-Список страниц
+doctype html
+html(class="no-js", lang="ru")
+    head
+        include ../../node_modules/bemto.pug/bemto.pug
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(charset="utf-8")
+        title Список страниц
+        //link(href='https://fonts.googleapis.com/css?family=Scada', rel='stylesheet')
+
+
+
+        style.
+            body {
+                margin: 0;
+                font-family: monospace;
+                background: #f7f7f7;
+            }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding:  0 15px 0;
+            }
+            .aero-list__head {
+                background-color: #403392;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                position: relative;
+                white-space: nowrap;
+                color: #fff;
+                text-decoration: none;
+                font-size: 1.22222rem;
+                line-height: 1.4;
+            }
+            .aero-list__list {
+                list-style: none;
+                margin: 30px -15px;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .aero-list__col {
+                padding: 0 15px;
+                flex: 0 0 20%;
+                max-width: 20%;
+                margin-bottom: 30px;
+                box-sizing: border-box;
+            }
+            .aero-list__card {
+                display: flex;
+            //width: 190px;
+                height: 190px;
+                flex-direction: column;
+                border-radius: 10px;
+                font-size: 16px;
+
+                text-decoration: none;
+                background: white;
+                transition: 0.2s;
+            }
+            .aero-list__card:visited .aero-list__card-bottom {
+            //color: #923333;
+            }
+
+            .aero-list__card:hover {
+                box-shadow: 0 0 20px 0px #eeeeee;
+            }
+            .aero-list__card-top {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                flex-grow: 1;
+                padding: 5px;
+                color: #979797;
+
+            }
+            .aero-list__card-bottom {
+                padding: 10px;
+                border-top: 1px solid #eaeaea;
+                //color: #403392;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+            }
+
+            @media (max-width: 1100px) {
+                .aero-list__col {
+                    flex: 0 0 25%;
+                    max-width: 25%;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .aero-list__col {
+                    flex: 0 0 33.33334%;
+                    max-width: 33.33334%;
+                }
+            }
+
+            @media (max-width: 550px) {
+                .aero-list__list {
+                    list-style: none;
+                    margin: 20px -10px;
+                }
+                .aero-list__col {
+                    padding: 0 10px;
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                    margin-bottom: 20px;
+                }
+
+                .aero-list__card {
+                    display: flex;
+                    height: 140px;
+                    font-size: 14px;
+                }
+                .aero-list__card-bottom {
+                    font-size: 12px;
+                }
+            }
+
+    +b.BODY.aero-list
+        +e.head
+            .container
+                +e.title Список страниц
+        .container
+            +e.list
+                -
+                    var pages = __pages
+                    pages = pages.filter(n => n.href[0] != '_')
+                    pages = pages.sort((a, b) => {
+                        let indexA = parseFloat(a.href.substr(0, a.href.indexOf('_'))) || 999
+                        let indexB = parseFloat(b.href.substr(0, b.href.indexOf('_'))) || 999
+                        return (indexA - indexB)
+
+                    })
+                each page in pages
+                    if (page.href !== 'index.html')
+                        +e.col
+                            +e.A.card(href=page.href)
+                                +e.card-top= page.desc
+                                +e.card-bottom= page.href
+
+

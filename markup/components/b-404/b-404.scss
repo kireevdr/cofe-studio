@@ -1,0 +1,28 @@
+.b-404 {
+  padding: 0 0 rem(50);
+  position: relative;
+    color: #58534E;
+    //background: #F7F7F7;
+}
+.b-404__title {
+  font-size: rem(160);
+    //font-family: $SFProDisplay;
+}
+.b-404__text {
+  font-size: rem(30);
+  font-weight: 700;
+  margin-bottom: rem(15);
+}
+.b-404__help {
+  font-size: 16px;
+  margin-bottom: rem(30);
+}
+.b-404__btns {
+
+}
+.b-404__btn {
+  @include btn;
+  margin-right: 5px;
+  margin-bottom: 5px;
+
+}

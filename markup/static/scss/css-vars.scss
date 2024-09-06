@@ -1,0 +1,28 @@
+
+:root {
+    --base: 1px;
+
+    --g1: calc(var(--base) * 2);
+    --g2: calc(var(--base) * 4);
+    --g3: calc(var(--base) * 5);
+    --g4: calc(var(--base) * 6);
+    --g5: calc(var(--base) * 8);
+    --g6: calc(var(--base) * 12);
+    --g7: calc(var(--base) * 16);
+    --g8: calc(var(--base) * 20);
+    --g9: calc(var(--base) * 24);
+    --g10: calc(var(--base) * 32);
+    --g11: calc(var(--base) * 48);
+    --g12: calc(var(--base) * 64);
+    --g13: calc(var(--base) * 96);
+    --g14: calc(var(--base) * 120);
+
+    @include media-breakpoint-down(sm) {
+        --g8: calc(var(--base) * 15);
+        --g9: calc(var(--base) * 20);
+        --g10: calc(var(--base) * 20);
+        --g11: calc(var(--base) * 20);
+        --g12: calc(var(--base) * 40);
+    }
+
+}

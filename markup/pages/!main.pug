@@ -1,0 +1,27 @@
+//-Главная
+extends ../layouts/default.pug
+
+
+include ../components/page-header/page-header
+include ../components/page-footer/page-footer
+include ../components/b-basic/b-basic
+include ../components/b-recomendations/b-recomendations
+
+block vars
+    - var title = 'Главная'
+
+block content
+    .page__header
+        +page-header
+    .page__wrapper
+        .page__b-basic
+            +b-basic
+        .page__b-recomendations
+            +b-recomendations
+    .page__footer
+        +page-footer
+
+
+
+
+

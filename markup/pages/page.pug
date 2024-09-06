@@ -1,0 +1,43 @@
+//- Текстовая страница
+extends ../layouts/default.pug
+
+include ../components/page-header/page-header.pug
+include ../components/page-footer/page-footer.pug
+include ../components/b-intro-simple/b-intro-simple
+include ../components/user-content/user-content
+block vars
+    - var title = 'Page'
+
+
+block content
+    .page__page-header
+        +page-header
+    .page__wrapper
+        .page__b-intro-simple
+            +b-intro-simple({
+                bg: '__static__img/general/apart-bg.jpg',
+                nav: {
+                    title: 'Политика конфиденциальности',
+                    bread: [
+                        {
+                            name: 'Главная',
+                            link: '/'
+                        },
+                        {
+                            name: 'Политика конфиденциальности',
+                        }
+                    ]
+                }
+            })
+
+
+        .page__content.page__gray
+            .container
+                +user-content
+
+
+
+        .page__footer
+            +page-footer
+
+
